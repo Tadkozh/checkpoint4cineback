@@ -1,28 +1,33 @@
 const connection = require('../db-config');
 
-const findAllMovies = () => connection.promise().query('SELECT * FROM movies');
+const TABLE = 'movies';
 
-const findOneMovieById = (id) =>
-  connection.promise().query('SELECT * FROM movies WHERE id = ?', [id]);
+const findAll = () => connection.promise().query(`SELECT * FROM ${TABLE}`);
 
-const insertMovie = ({ title, year, duration, country, genre, photoMovUrl, movieUrl, authorId }) =>
+const findOneById = (id) =>
+  connection.promise().query(`SELECT * FROM ${TABLE} WHERE id = ?`, [id]);
+
+const insertOne = ({ title, year, duration, country, genre, photoMovUrl, movieUrl, authorId }) =>
   connection
     .promise()
     .query(
-      'INSERT INTO movies (title, year, duration, country, genre, photoMovUrl, movieUrl, authorId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+      `INSERT INTO ${TABLE} (title, year, duration, country, genre, photoMovUrl, movieUrl, authorId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
       [title, year, duration, country, genre, photoMovUrl, movieUrl, authorId]
     );
 
-const updateMovie = (object, id) =>
-  connection.promise().query('UPDATE movies SET ? WHERE id = ?', [object, id]);
+const updateOne = (object, id) =>
+  connection.promise().query(`UPDATE ${TABLE} SET ? WHERE id = ?`, [object, id]);
 
-const deleteMovie = (id) =>
-  connection.promise().query('DELETE FROM movies WHERE id = ?', [id]);
+const deleteOne = (id) =>
+  connection.promise().query(`DELETE FROM ${TABLE} WHERE id = ?`, [id]);
+
+const findOneByAuthor = (authorId) => connection.promise().query(`SELECT * FROM ${TABLE} WHERE authorId = ?`, [authorId])
 
 module.exports = {
-  findAllMovies,
-  findOneMovieById,
-  insertMovie,
-  updateMovie,
-  deleteMovie,
+  findAll,
+  findOneById,
+  insertOne,
+  updateOne,
+  deleteOne,
+  findOneByAuthor,
 };
