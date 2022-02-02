@@ -10,7 +10,7 @@ const insertMovie = ({ title, year, duration, country, genre, photoMovUrl, movie
     .promise()
     .query(
       'INSERT INTO movies (title, year, duration, country, genre, photoMovUrl, movieUrl, authorId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-      [title, youtube_url, id_album]
+      [title, year, duration, country, genre, photoMovUrl, movieUrl, authorId]
     );
 
 const updateMovie = (object, id) =>
