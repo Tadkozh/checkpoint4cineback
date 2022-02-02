@@ -1,0 +1,27 @@
+Users Stories
+
+En tant qu'utilisateur, je dois être en mesure de récupérer la liste complète des films.
+En tant qu'utilisateur, je dois pouvoir récupérer un film par son ID.
+En tant qu'utilisateur, je dois être en mesure de créer un nouveau film.
+En tant qu'utilisateur, je dois être en mesure de mettre à jour un film.
+En tant qu'utilisateur, je dois être en mesure de supprimer un film.
+En tant qu'utilisateur, je dois être en mesure de récupérer la liste complète des auteurs
+En tant qu'utilisateur, je dois pouvoir récupérer un auteur par son ID
+En tant qu'utilisateur, je dois pouvoir récupérer la liste des films d'un auteur.
+En tant qu'utilisateur, je dois être en mesure de créer un nouvel auteur.
+En tant qu'utilisateur, je dois pouvoir mettre à jour un auteur
+(En tant qu'utilisateur, je dois être en mesure de supprimer un auteur : ou une mise en archive, du fait des films liés)
+
+Routes BACK correspondantes
+
+GET /api/movie
+GET /api/movie/1
+POST /api/movie
+PUT /api/movie
+DELETE /api/movie
+GET /api/author
+GET /api/author/1
+GET /api/author/1/movie
+POST /api/author
+PUT /api/author
+DELETE /api/author
