@@ -1,0 +1,31 @@
+{
+  "name": "checkpoint4cineback",
+  "version": "1.0.0",
+  "description": "Checkpoint 4 : Les origines du cinéma 1895 - 1929 - back",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tadkozh/checkpoint4cineback.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tadkozh/checkpoint4cineback/issues"
+  },
+  "homepage": "https://github.com/Tadkozh/checkpoint4cineback#readme",
+
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  
+  "dependencies": {
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3"
+  }
+}
