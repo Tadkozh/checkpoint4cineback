@@ -1,3 +1,4 @@
+const cors = require('cors');
 require('dotenv').config();
 const express = require('express');
 const moviesRouter = require('./routes/movies');
@@ -7,6 +8,7 @@ const connection = require('./db-config');
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use('/api/movies', moviesRouter);
 app.use('/api/authors', authorsRouter);
 
