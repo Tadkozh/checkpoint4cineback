@@ -1,38 +1,33 @@
-Checkpoint 4 : Les origines du cinéma 1895 - 1929
-_______________________________________________________
-
 Users Stories
 
-+ En tant qu'utilisateur, je dois être en mesure de récupérer la liste complète des films.
-+ En tant qu'utilisateur, je dois pouvoir récupérer un film par son ID.
+En tant qu'utilisateur, je dois être en mesure de récupérer la liste complète des films.
+En tant qu'utilisateur, je dois pouvoir récupérer un film par son ID.
 En tant qu'utilisateur, je dois être en mesure de créer un nouveau film.
 En tant qu'utilisateur, je dois être en mesure de mettre à jour un film.
 En tant qu'utilisateur, je dois être en mesure de supprimer un film.
-+ En tant qu'utilisateur, je dois être en mesure de récupérer la liste complète des auteurs
-+ En tant qu'utilisateur, je dois pouvoir récupérer un auteur par son ID
-+ En tant qu'utilisateur, je dois pouvoir récupérer la liste des films d'un auteur.
+En tant qu'utilisateur, je dois être en mesure de récupérer la liste complète des auteurs
+En tant qu'utilisateur, je dois pouvoir récupérer un auteur par son ID
+En tant qu'utilisateur, je dois pouvoir récupérer la liste des films d'un auteur.
 En tant qu'utilisateur, je dois être en mesure de créer un nouvel auteur.
 En tant qu'utilisateur, je dois pouvoir mettre à jour un auteur
 (En tant qu'utilisateur, je dois être en mesure de supprimer un auteur : ou une mise en archive, du fait des films liés)
 
 Routes BACK correspondantes
 
-+ GET /api/movies
-+ GET /api/movies/1
-+ POST /api/movies
-+ PUT /api/movies
-+ DELETE /api/movies
-+ GET /api/authors
-+ GET /api/authors/1
-+ GET /api/authors/1/movies
-+ POST /api/authors
-+ PUT /api/authors
-+ DELETE /api/authors
+GET /api/movies
+GET /api/movies/1
+POST /api/movies
+PUT /api/movies
+DELETE /api/movies
+GET /api/authors
+GET /api/authors/1
+GET /api/authors/1/movies
+POST /api/authors
+PUT /api/authors
+DELETE /api/authors
 _______________________________________________________
-https://github.com/Tadkozh/checkpoint4cineback
 git@github.com:Tadkozh/checkpoint4cineback.git
-https://github.com/Tadkozh/checkpoint4cinefront
-git@github.com:Tadkozh/checkpoint4cinefront.git
+
 _______________________________________________________
 Tests Thunder pour POST :
 
@@ -42,7 +37,7 @@ Tests Thunder pour POST :
 "duration": "82 min",
 "country": "États-Unis",
 "genre": "Comédie",
-"photoMovUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Gold_rush_poster.jpg/800px-Gold_rush_poster.jpg",
+"photoMovUrl": "https://fr.wikipedia.org/wiki/La_Ru%C3%A9e_vers_l%27or#/media/Fichier:Gold_rush_poster.jpg",
 "movieUrl": "https://youtu.be/Srnlg2b7y7M",
 "authorId": 3
 }
@@ -50,6 +45,6 @@ Tests Thunder pour POST :
 {
 "firstname": "Buster",
 "lastname": "Keaton",
-"photoAutUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Busterkeaton_edit.jpg/800px-Busterkeaton_edit.jpg",
+"photoAutUrl": "https://fr.wikipedia.org/wiki/Buster_Keaton#/media/Fichier:Busterkeaton_edit.jpg",
 "wikipediatUrl": "https://fr.wikipedia.org/wiki/Buster_Keaton"
 }
