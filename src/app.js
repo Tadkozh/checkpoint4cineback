@@ -11,6 +11,8 @@ app.use(express.json());
 app.use(cors());
 app.use('/api/movies', moviesRouter);
 app.use('/api/authors', authorsRouter);
+app.use('/api/authors/1/movies', authorsRouter, moviesRouter);
+
 
 connection.query('SELECT * FROM movies', (err, results) => {
   console.log(err, results);
